@@ -804,6 +804,66 @@ p:last-child {
   filter: grayscale(0);
 }
 
+/* Sponsor logo grid — 2-3 column grid of logos */
+.sponsor-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.sponsor-logo-grid img {
+  width: 100%;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+/* Affiliation rows — logo left, text right */
+.affiliation-list {
+  margin-top: 24px;
+}
+
+.affiliation-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.affiliation-logo {
+  flex: 0 0 120px;
+  justify-items: center;
+}
+
+.affiliation-logo img {
+  max-width: 120px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.affiliation-text {
+  flex: 1;
+}
+
+@media (max-width: 799px) {
+  .affiliation-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* Federation page — vision block responsive */
+@media (max-width: 799px) {
+  .fed-story + .two-col + div[style*="max-width: 48%"] {
+    max-width: 100% !important;
+  }
+
+  .sponsor-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ===== Accordion (FAQ) ===== */
 .accordion {
   border-top: 1px solid #ddd;
