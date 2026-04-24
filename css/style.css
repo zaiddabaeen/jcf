@@ -808,6 +808,53 @@ p:last-child {
   }
 }
 
+/* ===== Competitions Grid (jcf-competitions index) ===== */
+.competitions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.competition-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.competition-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #eee;
+}
+
+.competition-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.competition-card:hover .competition-card-image img {
+  transform: scale(1.04);
+}
+
+.competition-card-title {
+  margin: 14px 0 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+@media (max-width: 799px) {
+  .competitions-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
 /* Guidebook covers row (Where to Climb) — image left, caption right, stacked */
 .book-row {
   display: flex;
@@ -1188,81 +1235,3 @@ ol li {
   }
 }
 
-/* ===== Events Grid (All Events listing) ===== */
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 28px;
-}
-
-.event-card {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.event-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
-}
-
-.event-card-image {
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  background-color: #ddd;
-}
-
-.event-card-body {
-  padding: 18px 20px 22px;
-}
-
-.event-card-date {
-  margin: 0 0 6px;
-  font-size: 0.85em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.7;
-}
-
-.event-card-title {
-  margin: 0 0 8px;
-  font-size: 1.15em;
-  line-height: 1.3;
-}
-
-.event-card-loc {
-  margin: 0;
-  font-size: 0.9em;
-  opacity: 0.75;
-}
-
-/* ===== Event Detail Page ===== */
-.event-detail {
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.event-detail-meta h3 {
-  margin: 24px 0 6px;
-  font-size: 1em;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.75;
-}
-
-.event-detail-meta h3:first-child {
-  margin-top: 0;
-}
-
-.event-detail-meta p {
-  margin: 0;
-  line-height: 1.5;
-}
