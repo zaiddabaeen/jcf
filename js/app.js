@@ -46,20 +46,55 @@
   });
 
   // ===== Scroll animations (fade in on scroll) =====
+  // It's more important that sections are visible than that they animate,
+  // so we have multiple safety nets to guarantee `.visible` is added.
   const sections = document.querySelectorAll('.section:not(.hero-section)');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
+  function revealAll() {
+    sections.forEach(s => s.classList.add('visible'));
+  }
 
-  sections.forEach(section => observer.observe(section));
+  if (!('IntersectionObserver' in window)) {
+    // No IO support — just show everything immediately.
+    revealAll();
+  } else {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      // Use a 0 threshold so even partially-visible sections trigger,
+      // and a positive bottom rootMargin so sections just below the fold
+      // also reveal early.
+      threshold: 0,
+      rootMargin: '0px 0px 100px 0px'
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Safety net 1: after the page settles, force-reveal anything still hidden
+    // that's already within (or above) the viewport. Covers cases where the
+    // observer doesn't fire due to layout shifts, zero-size at init, etc.
+    function revealInViewport() {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      sections.forEach(s => {
+        if (s.classList.contains('visible')) return;
+        const rect = s.getBoundingClientRect();
+        if (rect.top < vh && rect.bottom > 0) {
+          s.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('load', revealInViewport);
+    setTimeout(revealInViewport, 300);
+
+    // Safety net 2: after a longer delay, just reveal everything no matter what.
+    // Visibility of content is more important than the animation.
+    setTimeout(revealAll, 2000);
+  }
 
   // ===== Accordion (FAQ) =====
   document.querySelectorAll('.accordion-toggle').forEach(btn => {
