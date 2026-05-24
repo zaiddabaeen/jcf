@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jordan Climbing Federation//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:federation-team-training-camp-with-klemen-bean@jcf.jo
+DTSTAMP:20240609T123817Z
+DTSTART:20231020T163000Z
+DTEND:20231026T173000Z
+SUMMARY:Federation Team Training Camp with Klemen Bečan
+LOCATION:Climbat Amman, Amman, Jordan
+URL:https://jcf.jo/all-events/federation-team-training-camp-with-klemen-bean/
+END:VEVENT
+END:VCALENDAR

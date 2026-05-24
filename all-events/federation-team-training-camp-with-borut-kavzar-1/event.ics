@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jordan Climbing Federation//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:federation-team-training-camp-with-borut-kavzar-1@jcf.jo
+DTSTAMP:20240609T123817Z
+DTSTART:20231101T163000Z
+DTEND:20231106T173000Z
+SUMMARY:Federation Team Training Camp with Borut Kavzar
+LOCATION:Climbat Amman, Amman, Jordan
+URL:https://jcf.jo/all-events/federation-team-training-camp-with-borut-kavzar-1/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,2 @@
+# iCalendar files require CRLF line endings (RFC 5545); don't normalize them.
+*.ics -text

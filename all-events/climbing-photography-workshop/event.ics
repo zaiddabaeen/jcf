@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jordan Climbing Federation//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:climbing-photography-workshop@jcf.jo
+DTSTAMP:20240609T123817Z
+DTSTART:20221031T090000Z
+DTEND:20221031T100000Z
+SUMMARY:Climbing Photography Workshop
+LOCATION:Amman, Jordan
+URL:https://jcf.jo/all-events/climbing-photography-workshop/
+END:VEVENT
+END:VCALENDAR

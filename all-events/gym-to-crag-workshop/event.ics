@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jordan Climbing Federation//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:gym-to-crag-workshop@jcf.jo
+DTSTAMP:20240609T123817Z
+DTSTART:20221001T090000Z
+DTEND:20221001T100000Z
+SUMMARY:Gym to Crag Workshop
+LOCATION:Amman, Jordan
+URL:https://jcf.jo/all-events/gym-to-crag-workshop/
+END:VEVENT
+END:VCALENDAR

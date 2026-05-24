@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jordan Climbing Federation//Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:open-lead-climbing-competition-2023@jcf.jo
+DTSTAMP:20240609T123817Z
+DTSTART:20230310T160000Z
+DTEND:20230311T170000Z
+SUMMARY:Open Lead Climbing Competition 2023
+LOCATION:Climbat Amman, Amman, Jordan
+URL:https://jcf.jo/all-events/open-lead-climbing-competition-2023/
+END:VEVENT
+END:VCALENDAR
