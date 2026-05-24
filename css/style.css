@@ -906,6 +906,34 @@ p:last-child {
   color: var(--text-dark);
 }
 
+/* Event subpage meta — mirrors the event-card meta styling for site consistency */
+.event-meta {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.event-meta p {
+  margin: 0 0 18px;
+}
+
+.event-meta-export {
+  margin-bottom: 0;
+}
+
+.event-meta a {
+  color: var(--text-dark);
+  text-decoration: underline;
+}
+
+.event-meta a:hover {
+  color: var(--text-muted);
+}
+
+.event-meta-export-divider {
+  padding: 0 8px;
+}
+
 @media (max-width: 999px) {
   .events-grid {
     grid-template-columns: repeat(2, 1fr);
