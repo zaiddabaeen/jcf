@@ -568,57 +568,6 @@ p:last-child {
   object-position: 50% 50%;
 }
 
-/* ===== Newsletter ===== */
-.newsletter-form {
-  max-width: 500px;
-}
-
-.newsletter-description {
-  font-size: 0.95rem;
-  margin-bottom: 16px;
-}
-
-.form-row {
-  display: flex;
-  gap: 10px;
-}
-
-.form-input {
-  flex: 1;
-  padding: 14px 16px;
-  font-family: var(--body-font);
-  font-size: 0.85rem;
-  border: 1px solid #ccc;
-  background: transparent;
-  color: var(--text-dark);
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.form-input::placeholder {
-  color: #999;
-}
-
-.form-input:focus {
-  border-color: var(--text-dark);
-}
-
-.newsletter-btn {
-  white-space: nowrap;
-}
-
-.newsletter-footnote {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-top: 10px;
-}
-
-.form-success {
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 20px 0;
-}
-
 /* ===== Footer ===== */
 .site-footer {
   padding: 60px 0;
@@ -743,10 +692,6 @@ p:last-child {
 
   .section-medium {
     padding: 60px 0;
-  }
-
-  .form-row {
-    flex-direction: column;
   }
 }
 
@@ -1073,33 +1018,6 @@ p:last-child {
 
 .accordion-toggle[aria-expanded="true"] + .accordion-content {
   display: block;
-}
-
-/* ===== Contact Form ===== */
-.contact-form {
-  width: 100%;
-}
-
-.form-group {
-  margin-bottom: 16px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.form-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.form-input {
-  width: 100%;
 }
 
 /* ===== Values Grid ===== */
